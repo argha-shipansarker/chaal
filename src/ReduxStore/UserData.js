@@ -25,12 +25,17 @@ const user20 = require("../data/38639.json")
 export const userDataSlice = createSlice({
     name: "userData",
     initialState: {
-        allUserInfo: [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20]
+        allUserInfo: [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20],
+        selectedUser: []
     },
     reducers: {
+
+        updateSelectedUser: (state, action) => {
+            state.selectedUser = action.payload
+        }
 
     }
 })
 
-export const {} = userDataSlice.actions
+export const { updateSelectedUser } = userDataSlice.actions
 export default userDataSlice.reducer
